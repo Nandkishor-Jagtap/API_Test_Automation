@@ -23,6 +23,7 @@ Every code push automatically runs Postman API tests through Jenkins and generat
 ---
 
 ## 📂 Project Structure
+```
 API_Test_Automation/
 │
 ├── UserAPITests.postman_collection.json    # Postman API test cases
@@ -31,6 +32,7 @@ API_Test_Automation/
 ├── reports/
 │   └── report.html                         # Generated HTML report
 └── Jenkinsfile or Freestyle Job Config
+```
 ---
 
 ## ⚙️ Step 1 — Local Setup
