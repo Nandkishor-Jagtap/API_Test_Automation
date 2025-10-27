@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "5d252034-3948-4730-8174-8ae06f5b2b4f",
+		"name": "UserAPITests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49544272",
+		"_collection_link": "https://n-r-jagtap786-581140.postman.co/workspace/Nandkishor-Jagtap's-Workspace~e9cf08ad-f53e-40aa-8117-cb07266ef54d/collection/49544272-5d252034-3948-4730-8174-8ae06f5b2b4f?action=share&source=collection_link&creator=49544272"
+	},
+	"item": [
+		{
+			"name": "Get Users List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response has data array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data.length).to.be.above(0);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1"
+					}
+				],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
