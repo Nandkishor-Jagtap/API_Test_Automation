@@ -155,9 +155,13 @@ Duration: 35s
 
 Artifacts:
 📄 reports/report.html
-🧾 Troubleshooting
-Issue	Cause	Solution
-❌ newman: command not found	Newman not installed globally	Run npm install -g newman
-❌ Report not generated	Wrong output path	Ensure reports/ folder exists
-❌ Jenkins can’t find files	Wrong workspace path	Use relative paths
-❌ Webhook not triggering	Jenkins running locally	Use ngrok to expose port 8080
+
+
+🧾 Troubleshooting:
+| Issue                         | Cause                         | Solution                        |
+| ----------------------------- | ----------------------------- | ------------------------------- |
+| ❌ `newman: command not found` | Newman not installed globally | Run `npm install -g newman`     |
+| ❌ Report not generated        | Wrong output path             | Ensure `reports/` folder exists |
+| ❌ Jenkins can’t find files    | Wrong workspace path          | Use relative paths              |
+| ❌ Webhook not triggering      | Jenkins running locally       | Use `ngrok` to expose port 8080 |
+
