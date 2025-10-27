@@ -24,14 +24,7 @@ Every code push automatically runs Postman API tests through Jenkins and generat
 
 ## 📂 Project Structure
 
-API_Test_Automation/
-│
-├── UserAPITests.postman_collection.json # Postman API test cases
-├── package.json # Dependencies
-├── package-lock.json
-├── reports/
-│ └── report.html # Generated HTML report
-└── Jenkinsfile or Freestyle Job Config
+<pre> API_Test_Automation/ │ ├── UserAPITests.postman_collection.json # Postman API test cases ├── package.json # Dependencies ├── package-lock.json ├── reports/ │ └── report.html # Generated HTML report └── Jenkinsfile or Freestyle Job Config </pre>
 
 
 
