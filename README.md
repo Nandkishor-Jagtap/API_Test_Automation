@@ -41,6 +41,14 @@ API_Test_Automation/
 ---
 
 ## ⚙️ Step 1 — Local Setup
+🖥️ Installation (Windows)
+
+Follow these steps to set up the project locally and integrate it with Jenkins:
+
+ Install Node.js
+
+Download and install Node.js from:
+👉 https://nodejs.org
 
 ### 1️⃣ Install Node.js and Newman
 ```bash
