@@ -33,8 +33,7 @@ API_Test_Automation/
 │ └── report.html # Generated HTML report
 └── Jenkinsfile or Freestyle Job Config
 
-yaml
-Copy code
+
 
 ---
 
@@ -45,23 +44,18 @@ Copy code
 npm install -g newman
 npm install -g newman-reporter-html
 2️⃣ Verify installation
-bash
-Copy code
+
 newman -v
 💻 Step 2 — Setup Project Dependencies
 Initialize your Node.js project:
 
-bash
-Copy code
 npm init -y
 Install dependencies locally:
 
-bash
-Copy code
 npm install newman newman-reporter-html --save-dev
+
 🧩 Step 3 — Run API Tests Locally
-bash
-Copy code
+
 npx newman run UserAPITests.postman_collection.json -r cli,html --reporter-html-export reports/report.html
 ✅ Output:
 
@@ -82,8 +76,6 @@ Job Name: API_Test_Automation
 
 Build Step:
 
-bat
-Copy code
 copy "C:\Users\Nandkishor\Documents\UserAPITests.postman_collection.json" "%cd%"
 mkdir reports
 npx newman run UserAPITests.postman_collection.json -r cli,html --reporter-html-export reports\report.html
@@ -91,7 +83,6 @@ Post-Build Action (Choose one):
 
 ✅ Archive the Artifacts
 
-Copy code
 reports/*.html
 or
 
@@ -117,8 +108,6 @@ Go to Settings → Webhooks → Add Webhook
 
 Payload URL:
 
-*perl
-Copy code
 http://<your-local-ip>:8080/github-webhook/
 (If running locally, expose Jenkins via ngrok)
 
@@ -128,13 +117,9 @@ Trigger: “Just the push event”
 
 Expose your Jenkins using:
 
-*bash
-Copy code
 ngrok http 8080
 Then copy the generated link:
 
-*perl
-Copy code
 https://<your-ngrok-url>/github-webhook/
 and use it in GitHub webhook.
 
